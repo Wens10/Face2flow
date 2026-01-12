@@ -106,6 +106,21 @@
             </div>
             <style>
                 /* ================= PUB FACE2FLOW ================= */
+                .Pub_f2f a.publink {
+                    position: absolute;
+                    bottom: 1px;
+                    padding: 8px 12px;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1rem;
+                    z-index: 2;
+                }
+                .Pub_f2f a.publink:hover {
+                    background-color: #ffc401a4;
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    
+                }
                 .Pub_f2f {
                     position: absolute;
                     top: 150px;
@@ -164,26 +179,8 @@
                     animation: pulse 3s infinite;
                 }
 
-                /* OVERLAY HOVER */
-                .Pub_f2f::after {
-                    content: "Découvrir";
-                    position: absolute;
-                    inset: 0;
-                    background: rgba(0, 0, 0, 0.85);
-                    color: #ffc800;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-weight: 600;
-                    letter-spacing: 1px;
-                    opacity: 0;
-                    transition: .4s;
-                    z-index: 3;
-                }
 
-                .Pub_f2f:hover::after {
-                    opacity: 1;
-                }
+
 
                 /* ================= ANIMATIONS ================= */
 
