@@ -1,7 +1,7 @@
 /* HERO */
 .collab-hero {
-  height: 80vh;
-  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)),
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.591), rgba(0, 0, 0, 0.701)),
   url("/photos/Culture-Urbaine.jpg");
   background-size: cover;
   display: flex;

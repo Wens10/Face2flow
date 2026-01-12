@@ -289,7 +289,7 @@ p {
 
 /* ================= HERO ================= */
 .hero {
-    height: 80vh;
+    height: 100vh;
     background: url("/photos/Culture-Urbaine.jpg") center / cover no-repeat;
     position: relative;
     display: flex;

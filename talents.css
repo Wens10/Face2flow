@@ -19,14 +19,23 @@ body {
 
 /* HERO */
 .talents-hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)),
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.525), rgba(0, 0, 0, 0.621)),
         url("/photos/Culture-Urbaine.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
 }
-
+.hero-content {
+    padding: 0 2rem;
+    max-width: 1200px;
+    font-size: 30px;
+}
+.hero-content p {
+    color: #ddd;
+    margin-top: 1rem;
+    font-size: 20px;
+}
 .hero-content h1 {
     color: #ffc800;
 }

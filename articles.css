@@ -20,7 +20,7 @@
 
           /* ================= HERO ================= */
           .heros {
-              height: 80vh;
+              height: 100vh;
               background: url("/photos/jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg") center / cover no-repeat;
               position: relative;
               display: flex;
