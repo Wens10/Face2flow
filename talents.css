@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+:root {
+    --bg: #000;
+    --yellow: #ffc800;
+    --text: #fff;
+    --muted: #aaa;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* HERO */
+.talents-hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)),
+        url("/photos/Culture-Urbaine.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content h1 {
+    color: #ffc800;
+}
+
+.talents-intro,
+.talents-search {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.talents-intro h2 {
+    color: var(--yellow);
+    margin-bottom: 1rem;
+}
+
+/* SEARCH */
+.talents-search {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+#talentSearch {
+    background: #111;
+    border: 1px solid #222;
+    color: #fff;
+    padding: .8rem 1rem;
+}
+
+/* GRID */
+.talents-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+/* CARD */
+.talent-card h3 {
+    color: var(--yellow);
+    margin-top: .7rem;
+}
+
+.talent-card span {
+    color: var(--muted);
+    font-size: .8rem;
+}
+
+/* IMAGE + OVERLAY */
+.img-wrapper {
+    position: relative;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .75);
+    color: var(--yellow);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: .3s;
+}
+
+.img-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+/* CTA */
+.talents-cta {
+    background: rgba(119, 98, 3, 0.479);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.cta-btn {
+    background: black;
+    color: #ffffff;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    padding: 1rem 2rem;
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    transition: ease background 0.3s;
+}
+.cta-btn:hover {
+    background: #ffc8009f;
+}
+
+/* FOOTER */
+.footer-bottom {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+}

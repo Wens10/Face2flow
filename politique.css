@@ -1,0 +1,87 @@
+/* ================= BASE ================= */
+.legal-container {
+  width: 100%;
+  margin: auto;
+  padding-bottom: 4rem;
+}
+
+.legal-container section {
+  padding: 2rem;
+}
+
+/* ================= HERO ================= */
+.heros {
+  height: 50vh;
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.95)),
+    url("https://images.unsplash.com/photo-1529070538774-1843cb3265df");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.hero-content {
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  color: var(--yellow, #ffc501);
+  margin-bottom: .5rem;
+}
+
+/* ================= TEXT ================= */
+.legal-container h2 {
+  color: var(--yellow, #ffc501);
+  margin-bottom: .8rem;
+  font-size: 1.4rem;
+}
+
+.legal-container p {
+  color: #ccc;
+  font-size: .95rem;
+  line-height: 1.8;
+  max-width: 850px;
+}
+
+.legal-container a {
+  color: var(--yellow, #ffc501);
+  text-decoration: none;
+}
+
+.legal-container a:hover {
+  text-decoration: underline;
+}
+
+/* ================= SECTIONS ================= */
+.legal-container section:not(.heros) {
+  border-bottom: 1px solid #111;
+}
+
+.legal-container section:last-child {
+  border-bottom: none;
+}
+
+/* ================= HEADER FIX ================= */
+.header {
+  background: #000;
+  border-bottom: 1px solid #111;
+}
+
+/* ================= FOOTER FIX ================= */
+.footer {
+  margin-top: 4rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .legal-container section {
+    padding: 1.5rem;
+  }
+}

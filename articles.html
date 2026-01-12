@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Face2Flow – Articles & Interviews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Face2Flow – Média culturel nouvelle génération.">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="F2F" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="articles.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header-container">
+
+            <div class="logo"><img src="/photos/logo-f2f-removebg-preview.png" alt="" width="170px" height="80px"></div>
+
+            <!-- NAV DESKTOP -->
+            <nav class="nav-desktop">
+                <a href="/index.html">Accueil</a>
+                <a href="/a_propos.html">À propos</a>
+                <a href="#" class="active">Articles</a>
+                <a href="/Talents.html">Talents</a>
+                <a href="/Collabs.html">Collaborer</a>
+                <a href="/Contact.html">Contact</a>
+            </nav>
+
+        </div>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+                <input type="checkbox" id="menuCheckbox" />
+
+                <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+                <ul id="menu">
+                    <!-- 
+      We can use a label here to close upon click (when doing same page navigation), this
+      does require a slight bit of JS.
+      -->
+                    <li>
+                        <a href="#" class="active">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="/a_propos.html">À propos</a>
+                    </li>
+                    <li><a href="/articles.html">Articles</a></li>
+                    <li><a href="/Talents.html">Talents</a></li>
+                    <li><a href="/collabs.html">Collaborer</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <main class="main-content">
+        <section class="heros">
+            <div class="hero-content">
+                <h1>Articles & Interviews</h1>
+                <p>Découvrez nos reportages, interviews et analyses sur la culture urbaine contemporaine.</p>
+            </div>
+        </section>
+
+        <section class="controls">
+            <nav class="filters">
+                <button class="active" data-category="all">Tous</button>
+                <button data-category="street-art">Street Art</button>
+                <button data-category="musique">Musique</button>
+                <button data-category="mode">Mode</button>
+                <button data-category="Personnalité-Publique">Personnalité-Publique</button>
+                <button data-category="photo">Photographie</button>
+            </nav>
+
+            <input type="search" id="search" placeholder="Rechercher un article..." aria-label="Recherche article" />
+        </section>
+
+
+        <p class="count"><span id="count">0</span> articles</p>
+
+        <section class="grid" id="articles">
+            <!-- <article class="card" data-category="musique" data-title="Rap français nouvelle génération">
+                <span class="tag">Musique</span>
+                <div class="thumb orange"></div>
+                <time>15 Mai 2026</time>
+                <h2>Le rap français nouvelle génération avec Yooma</h2>
+                <p>L'ascension fulgurante de Yooma sur scène
+                    urbaine Franco-congolaise</p>
+                <a href="article-type.html" class="read-more">Lire l'article →</a>
+            </article> -->
+
+            <article class="card" data-category="Personnalité-Publique" data-title="Architecture urbaine réinventée">
+                <span class="tag">Personnalité-Publique</span>
+                <div class="thumb city"></div>
+                <time>14 janvier 2026</time>
+                <h2>Alison B chez Face2Flow</h2>
+                <p>Une influence majeure dans la scène urbaine Franco-congolaise</p>
+                <a href="/ARTICLES/article_alison.html" class="read-more">Lire l'article →</a>
+            </article>
+
+
+        </section>
+
+        <script src="script.js"></script>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer">
+
+            <div class="footer-container">
+
+                <div class="footer-col">
+                    <h3>Face2Flow</h3>
+                    <p>Média culturel nouvelle génération dédié aux créateurs urbains.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Navigation</h3>
+                    <a href="/index.html">Accueil</a>
+                    <a href="/a_propos.html">À propos</a>
+                    <a href="/articles.html">Articles</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Communauté</h3>
+                    <a href="/talents.html">Talents</a>
+                    <a href="/collabs.html">Collaborer</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Suivez-nous</h3>
+                    <a href="https://www.instagram.com/face2flow/">Instagram</a>
+                    <a href="https://www.tiktok.com/@face2flow">TikTok</a>
+                    <a href="https://www.youtube.com/@FACE2FLOW">YouTube</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="/légales.html">Mentions légales</a>
+                    <a href="/politique.html">Politique de confidentialité</a>
+                </div>
+                <br>
+                <div>
+                    © 2026 Face2Flow. Tous droits réservés.
+                </div>
+            </div>
+            <style>
+                .footer-legal a {
+                    display: flex;
+                    gap: 15px;
+                    justify-content: center;
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+                .footer-legal a:hover {
+                    color: rgb(255, 200, 0);
+                }
+            </style>
+        </footer>
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>

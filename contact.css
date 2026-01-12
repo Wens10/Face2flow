@@ -1,0 +1,140 @@
+/* HERO */
+.contact-hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)),
+  url("/photos/email.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  padding: 0 2rem;
+  max-width: 1200px;
+}
+
+.hero-content h1 {
+  color: #ffc501;
+  font-size: 3rem;
+}
+
+/* WRAPPER */
+.contact-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+/* LEFT */
+.contact-left h2 {
+  color: #ffc501;
+  margin-bottom: 2rem;
+}
+
+.contact-block {
+  margin-bottom: 1.5rem;
+}
+
+.contact-block h4 {
+  color: #fff;
+  margin-bottom: .3rem;
+}
+
+.yellow {
+  color: #ffc501;
+}
+
+/* FAQ */
+.faq {
+  margin-top: 3rem;
+}
+
+.faq h3 {
+  color: var(--yellow);
+  margin-bottom: 1rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #222;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: .95rem;
+  cursor: pointer;
+}
+
+.faq-question span {
+  color: #ffc501;
+  font-size: 1.2rem;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  color: #bbb;
+  transition: max-height .3s ease;
+  padding-right: 1.5rem;
+}
+
+/* RIGHT */
+.contact-right {
+  background: #0f0f0f;
+  padding: 2.5rem;
+}
+
+.contact-right h3 {
+  color: #ffc501;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  font-size: .85rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  background: #222;
+  border: none;
+  padding: .7rem;
+  color: #bababa;
+  margin-bottom: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.checkbox {
+  display: flex;
+  gap: .6rem;
+  font-size: .75rem;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form button {
+  background: #ffc501;
+  border: none;
+  padding: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

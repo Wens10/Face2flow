@@ -1,0 +1,223 @@
+/* HERO */
+.collab-hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)),
+  url("/photos/Culture-Urbaine.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  padding: 0 2rem;
+  max-width: 1200px;
+}
+.hero-content h1 {
+  color: #ffc501;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+/* WHY */
+.collab-why {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+.collab-why h2 {
+  color: #ffc501;
+  margin-bottom: 2rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.why-card {
+  background: #0f0f0f;
+  padding: 2rem;
+}
+
+.why-card span {
+  font-size: 1.5rem;
+}
+
+.why-card h3 {
+  color: #ffc501;
+  margin: .5rem 0;
+}
+
+/* PROCESS */
+
+.collab-process {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* TITRE COLONNE GAUCHE */
+.process-left h2 {
+  color: #ffc501;
+  margin-bottom: 2.5rem;
+}
+
+/* STEP */
+.step {
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 200, 0, 0.06),
+    rgba(255, 200, 0, 0.015)
+  );
+  border-left: 4px solid #ffc501;
+}
+
+
+/* TITRE */
+.step h4 {
+  color: #ffc501;
+  font-size: 1.05rem;
+  margin-bottom: .4rem;
+}
+
+/* TEXTE */
+.step p {
+  color: #ccc;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+/* EFFET HOVER */
+.step:hover {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 200, 0, 0.12),
+    rgba(255, 200, 0, 0.03)
+  );
+}
+
+/* FORMULAIRE */
+.process-right {
+  background: linear-gradient(
+    180deg,
+    #111,
+    #0a0a0a
+  );
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 200, 0, 0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .collab-process {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* FORM */
+.process-right {
+  background: #0f0f0f;
+  padding: 2rem;
+}
+
+.process-right h3 {
+  color: #ffc501;
+  margin-bottom: 1rem;
+}
+
+.collab-form label {
+  font-size: .85rem;
+}
+
+.collab-form input,
+.collab-form textarea,
+.collab-form select {
+  width: 100%;
+  background: #222;
+  border: none;
+  padding: .7rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.collab-form textarea {
+  min-height: 120px;
+}
+
+.collab-form button {
+  background: #ffc501;
+  color: #000;
+  border: none;
+  padding: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.collab-form button:hover {
+  background: #e6b800;
+}
+
+/* TESTIMONIALS */
+.collab-testimonials {
+  padding: 4rem 2rem;
+  background: #050505;
+}
+
+.collab-testimonials h2 {
+  text-align: center;
+  color: #ffc501;
+  margin-bottom: 3rem;
+}
+
+.testi-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.testi-card {
+  text-align: center;
+}
+
+.avatar1 {
+  width: 80px;
+  height: 80px;
+  background-image: url("/photos/alison.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.avatar2 {
+  width: 80px;
+  height: 80px;
+  background-image: url("/photos/Yooma.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.testi-card span {
+  color: #ffc501;
+  font-size: .8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .collab-process {
+    grid-template-columns: 1fr;
+  }
+}

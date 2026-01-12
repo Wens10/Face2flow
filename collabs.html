@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Face2Flow – Média culturel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Face2Flow – Média culturel nouvelle génération.">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="F2F" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="collabs.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header-container">
+
+            <div class="logo"><img src="/photos/logo-f2f-removebg-preview.png" alt="" width="170px" height="80px"></div>
+
+            <!-- NAV DESKTOP -->
+            <nav class="nav-desktop">
+                <a href="/index.html">Accueil</a>
+                <a href="/a_propos.html">À propos</a>
+                <a href="/articles.html">Articles</a>
+                <a href="/Talents.html">Talents</a>
+                <a href="#" class="active">Collaborer</a>
+                <a href="/Contact.html">Contact</a>
+            </nav>
+
+        </div>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+                <input type="checkbox" id="menuCheckbox" />
+
+                <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+                <ul id="menu">
+                    <!-- 
+      We can use a label here to close upon click (when doing same page navigation), this
+      does require a slight bit of JS.
+      -->
+                    <li>
+                        <a href="#" class="active">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="/a_propos.html">À propos</a>
+                    </li>
+                    <li><a href="/articles.html">Articles</a></li>
+                    <li><a href="/Talents.html">Talents</a></li>
+                    <li><a href="/collabs.html">Collaborer</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <main class="main-content">
+        <!-- HERO -->
+        <section class="collab-hero">
+            <div class="hero-content">
+                <h1>Collaborer avec Face2Flow</h1>
+                <p>Rejoignez notre média et partagez votre créativité avec une communauté passionnée.</p>
+            </div>
+        </section>
+
+        <!-- WHY -->
+        <section class="collab-why">
+            <h2>Pourquoi collaborer avec nous ?</h2>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <span>📣</span>
+                    <h3>Visibilité</h3>
+                    <p>Faites connaître votre travail auprès d’une audience engagée passionnée de culture urbaine.</p>
+                </div>
+
+                <div class="why-card">
+                    <span>🤝</span>
+                    <h3>Réseau</h3>
+                    <p>Intégrez une communauté de créateurs et développez votre réseau professionnel.</p>
+                </div>
+
+                <div class="why-card">
+                    <span>⭐</span>
+                    <h3>Reconnaissance</h3>
+                    <p>Bénéficiez d’interviews, de reportages et de contenus dédiés à votre travail.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW + FORM -->
+        <section class="collab-process">
+
+            <div class="process-left">
+                <h2>Comment collaborer ?</h2>
+
+                <div class="step">
+                    <span></span>
+                    <h4>Proposer un article</h4>
+                    <p>Proposez un article invité sur un sujet lié à la culture urbaine.</p>
+                </div>
+
+                <div class="step">
+                    <span></span>
+                    <h4>Être interviewé</h4>
+                    <p>Partagez votre parcours et vos projets dans une interview Face2Flow.</p>
+                </div>
+
+                <div class="step">
+                    <span></span>
+                    <h4>Partenariat média</h4>
+                    <p>Collaborons ensemble pour promouvoir un événement ou un projet culturel.</p>
+                </div>
+
+                <div class="step">
+                    <span></span>
+                    <h4>Contribution créative</h4>
+                    <p>Photographe, vidéaste, illustrateur ? Participez à nos projets éditoriaux.</p>
+                </div>
+            </div>
+
+            <div class="process-right">
+                <h3>Soumettez votre projet</h3>
+
+                <form class="collab-form" id="collabForm">
+
+                    <label>Nom complet</label>
+                    <input type="text" name="name" placeholder="Votre nom" required>
+
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="votre@email.com" required>
+
+                    <label>Type de collaboration</label>
+                    <select name="type" required>
+                        <option value="">Sélectionnez une option</option>
+                        <option>Proposer un article</option>
+                        <option>Être interviewé</option>
+                        <option>Partenariat média</option>
+                        <option>Contribution créative</option>
+                    </select>
+
+                    <label>Votre spécialité</label>
+                    <input type="text" name="speciality" placeholder="Ex: Graffiti, Musique, Design..." required>
+
+                    <label>Décrivez votre projet</label>
+                    <textarea name="project" placeholder="Parlez-nous de votre projet..." required></textarea>
+
+                    <label>Portfolio / Liens (optionnel)</label>
+                    <input type="url" name="portfolio" placeholder="https://...">
+
+                    <button type="submit">Envoyer ma proposition</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="collab-testimonials">
+            <h2>Ils ont collaboré avec nous</h2>
+
+            <div class="testi-grid">
+
+                <div class="testi-card">
+                    <div class="avatar1"></div>
+                    <h4>Alison B</h4>
+                    <span>Influenceuse</span>
+                    <p>“Grâce à Face2Flow, j’ai pu partager lors d'un podcast des histoires que ma communauté ne
+                        connaissez pas et ainsi plus me rapprocher d'eux.”</p>
+                </div>
+                <!-- 
+                <div class="testi-card">
+                    <div class="avatar2"></div>
+                    <h4>Yooma</h4>
+                    <span>Artiste Chanteur</span>
+                    <p>“En tant que Gandjaman j'ai eu l'occasion d'être interviewé par Face2Flow et de presté sur leur plateau. ”</p>
+                </div> -->
+
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>Face2Flow</h3>
+                <p>Média culturel nouvelle génération dédié aux créateurs urbains.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Navigation</h3>
+                <a href="/index.html">Accueil</a>
+                <a href="/a_propos.html">À propos</a>
+                <a href="/articles.html">Articles</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Communauté</h3>
+                <a href="/talents.html">Talents</a>
+                <a href="/collabs.html">Collaborer</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Suivez-nous</h3>
+                <a href="https://www.instagram.com/face2flow/">Instagram</a>
+                <a href="https://www.tiktok.com/@face2flow">TikTok</a>
+                <a href="https://www.youtube.com/@FACE2FLOW">YouTube</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <a href="/légales.html">Mentions légales</a>
+                <a href="/politique.html">Politique de confidentialité</a>
+            </div>
+            <br>
+            <div>
+                © 2026 Face2Flow. Tous droits réservés.
+            </div>
+        </div>
+        <style>
+            .footer-legal a {
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .footer-legal a:hover {
+                color: rgb(255, 200, 0);
+            }
+        </style>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="collab.js"></script>
+</body>
+
+</html>

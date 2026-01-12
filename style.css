@@ -1,0 +1,953 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #161616;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    /* make it look decent enough */
+    background: #232323;
+    color: #cdcdcd;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+
+
+p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+/* Menu code starts here */
+
+#menuToggle {
+    display: none;
+    /* You can also use relative/absolute here if you want to stay on the top */
+    position: fixed;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #ffffff;
+
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: #ffc501;
+}
+
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: white;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #ffffff;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    max-width: 180px;
+    width: 100vw;
+    max-height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 150px;
+    
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.416);
+    backdrop-filter: blur(10px);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+#menu li label {
+    cursor: pointer;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+@media (max-width: 900px) {
+    #menuToggle {
+        display: block;
+    }
+}
+
+
+
+
+/* ================= HEADER ================= */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #00000075;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+
+}
+
+.header-container {
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+
+.logo span {
+    color: #fff;
+}
+
+.nav-desktop a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-desktop a.active,
+.nav-desktop a:hover {
+    color: #FFD700;
+}
+
+/* ================= BURGER ================= */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger span {
+    width: 26px;
+    height: 3px;
+    background: #fff;
+}
+
+/* ================= NAV MOBILE ================= */
+.nav-mobile {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.nav-mobile ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.nav-mobile a {
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-mobile a.active {
+    color: #FFD700;
+}
+
+.nav-mobile a:hover {
+    color: #FFD700;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 80vh;
+    background: url("/photos/Culture-Urbaine.jpg") center / cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 700px;
+    padding-left: 80px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #FFD700;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-yellow {
+    background: #FFD700;
+    color: #000;
+    transition: ease background 0.3s, ease color 0.3s;
+}
+
+.btn-yellow:hover {
+    background: #8e690a;
+
+}
+
+.btn-outline {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    transition: ease background 0.3s, ease color 0.3s, ease border 0.3s;
+}
+
+.btn-outline:hover {
+    background: #292929;
+    color: #ffffff;
+
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #000;
+    padding: 60px 80px 30px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-col h3 {
+    color: #FFD700;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-col p,
+.footer-col a {
+    font-size: 14px;
+    color: #aaa;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: ease color 0.3s;
+}
+
+.footer-col a:hover {
+    color: #FFD700;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-legal a {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    color: rgb(255, 200, 0);
+}
+
+.retour {
+    margin-left: 20px;
+    padding: 10px 15px;
+    background-color: #111;
+    color: #ffc501;
+    text-decoration: none;
+    border: 1px solid rgba(255, 200, 0, .3);
+}
+
+.retour:hover {
+    background-color: #ffc501;
+    color: #000;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    
+    .header-container {
+        padding: 20px;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        z-index: 100;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ================= LATEST ARTICLES ================= */
+
+.latest-articles {
+    padding: 20px 200px;
+
+}
+
+.Date {
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+/* Titre de section */
+.section-title {
+    color: #FFD700;
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Grille */
+.grid-articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Carte article */
+.card {
+    background: #111;
+    overflow: hidden;
+    width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Image */
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+
+/* Contenu */
+.card-content {
+    padding: 20px;
+}
+
+/* Catégorie */
+.category {
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+/* Titre article */
+.card-content h3 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Lien */
+.read-more {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFD700;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.read-more:hover {
+    transform: translateX(5px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .latest-articles {
+        padding: 60px 20px;
+    }
+}
+
+.collaborate-section {
+    background-image: url(/photos/email.png);
+    background-size: cover;
+    background-position: center;
+    padding: 180px;
+}
+
+.section-title2 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.center-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.container-valeurs {
+    padding: 40px 20px;
+    background-image: url('/photos/Artifice.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+.section-title4 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #ffd501;
+}
+
+.cards-valeurs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-valeurs1 {
+    background-color: #151414b6;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.card-valeurs1 h4 {
+    margin-bottom: 15px;
+    color: #ffd501;
+}
+
+.card-valeurs1 p {
+    line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+    .cards-valeurs {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.section-title3 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #ffd501;
+}
+
+.about-text {
+    margin-bottom: 40px;
+    width: 900px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.container-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: black;
+}
+
+.container-about img {
+    margin-top: 0;
+    border-radius: 20px;
+    transform: scale();
+}
+
+.center-content img:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+}
+
+@media (max-width: 900px) {
+    .container-about {
+        flex-direction: column;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+}
+
+.teams {
+    padding: 40px 20px;
+    background-color: #121212;
+    text-align: center;
+}
+
+.cards-equipe {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.card-equipe {
+    background: #1a1a1a;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-equipe:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-equipe {
+    width: 100%;
+    height: 240px;
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content-equipe {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content-equipe h4 {
+    margin: 10px 0 5px;
+    color: #ffd501;
+}
+
+.card-content-equipe span {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* === CONTENEUR GLOBAL === */
+.cards-equipe2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* === CARTE === */
+.card-equipe2 {
+
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+}
+
+.card-equipe2:hover,
+.card-equipe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* === IMAGE CIRCULAIRE === */
+.card-img-equipe2 {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.card-equipe2:hover .card-img-equipe2,
+.card-equipe:hover .card-img-equipe2 {
+    transform: scale(1.05);
+}
+
+/* === CONTENU TEXTE === */
+.card-content-equipe2 h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffd501;
+    line-height: 1.4;
+}
+
+.card-content-equipe2 span {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.btn-plus {
+    display: flex;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #ffd50143;
+    color: #111;
+    text-decoration: none;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-plus:hover {
+    background-color: #ffd501;
+    color: #000;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+    .card-img-equipe2 {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ================= PUB FACE2FLOW ================= */
+.publink {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 6px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.publink:hover {
+    background: rgba(255, 200, 0, 0.8);
+    color: #000;
+}
+
+.Pub_f2f {
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    width: 500px;
+    height: 270px;
+    background: linear-gradient(160deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(20, 20, 20, 0.9));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 200, 0, 0.25);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px rgba(255, 200, 0, 0.05);
+    overflow: hidden;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* GLOW ANIMÉ */
+.Pub_f2f::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(circle,
+            rgba(255, 200, 0, 0.15),
+            transparent 60%);
+    animation: rotateGlow 8s linear infinite;
+}
+
+/* LABEL */
+.Pub_f2f span {
+    position: relative;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #ffc800;
+    z-index: 2;
+}
+
+/* IMAGE */
+.pub-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0 0 0 rgba(255, 200, 0, 0);
+    animation: pulse 3s infinite;
+}
+
+
+
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 200, 0, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 14px rgba(255, 200, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 200, 0, 0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes rotateGlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+  .Pub_f2f {
+    display: none !important;
+  }
+}

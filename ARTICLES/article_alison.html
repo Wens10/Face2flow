@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Face2Flow – Média culturel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Face2Flow – Média culturel nouvelle génération.">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="F2F" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/modele.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="header-container">
+
+            <div class="logo"><img src="/photos/logo-f2f-removebg-preview.png" alt="" width="170px" height="80px"></div>
+
+            <!-- NAV DESKTOP -->
+            <nav class="nav-desktop">
+                <a href="/index.html">Accueil</a>
+                <a href="/a_propos.html">À propos</a>
+                <a href="/articles.html" class="active">Articles</a>
+                <a href="/Talents.html">Talents</a>
+                <a href="/collabs.html">Collaborer</a>
+                <a href="/Contact.html">Contact</a>
+
+            </nav>
+            <a href="/articles.html" class="retour">Retour</a>
+            <style>
+                .retour {
+                    margin-left: 20px;
+                    padding: 10px 15px;
+                    background-color: #111;
+                    color: #ffc501;
+                    text-decoration: none;
+                    border: 1px solid rgba(255, 200, 0, .3);
+                }
+
+                .retour:hover {
+                    background-color: #ffc501;
+                    color: #000;
+                }
+            </style>
+        </div>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+                <input type="checkbox" id="menuCheckbox" />
+
+                <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+                <ul id="menu">
+                    <!-- 
+      We can use a label here to close upon click (when doing same page navigation), this
+      does require a slight bit of JS.
+      -->
+                    <li>
+                        <a href="#" class="active">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="/a_propos.html">À propos</a>
+                    </li>
+                    <li><a href="/articles.html">Articles</a></li>
+                    <li><a href="/Talents.html">Talents</a></li>
+                    <li><a href="/collabs.html">Collaborer</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO ARTICLE -->
+    <section class="article-hero">
+        <div class="article-hero-content">
+            <span class="article-tag">Podcast</span>
+            <h1>Alison B : Influenceur un impact culturel</h1>
+            <p class="article-meta">
+                Publié le 26 Décembre 2025 • Podcast Face2Flow
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTENU -->
+    <main class="article-container">
+
+        <!-- PROFIL -->
+        <aside class="article-profile">
+            <img src="/photos/alison2.jpg" alt="Alison B">
+            <h3>Alison B</h3>
+            <span>Personnalité Publique</span>
+            <p>
+                Alison B est une influenceuse et créatrice de contenu
+                qui montre dans ces vidéos la belle relations qu'elle entretient avec sa mère.
+                <br><br>
+                Dans des vidéo droles et touchantes, elles partagent des moments de vie,
+                ce qui a permis à Alison de se construire une communauté fidèle et engagée.
+                <br><br>
+                Son authenticité et sa créativité font d'elle une figure montante
+                de la culture urbaine sur les réseaux sociaux.
+
+            </p>
+
+            <a href="https://www.instagram.com/b_y_alis/" target="_blank" class="profile-btn">
+                Instagram
+            </a>
+        </aside>
+
+        <!-- ARTICLE -->
+        <article class="article-content">
+
+            <h2>Le podcast</h2>
+            <p>
+                Dans cet épisode de Face2Flow, Alison B revient sur son parcours,
+                ses inspirations et sa vision de l'impact culturel des réseaux sociaux.
+            </p>
+
+            <p>
+                Elle partage également des anecdotes sur sa relation avec sa mère
+                et comment elles collaborent pour créer du contenu authentique.
+            </p>
+
+            <!-- VIDEO YOUTUBE -->
+            <div class="video-wrapper">
+                <iframe width="1515" height="852" src="https://www.youtube.com/embed/5XeCQMGvFJA"
+                    title="🎙️ Influenceur : un impact culturel ? | Face2Flow x Alison B" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <p>
+                Regardez l’épisode directement ici ou sur YouTube.
+            </p>
+
+            <a href="https://youtu.be/5XeCQMGvFJA" target="_blank" class="youtube-btn">
+                Voir sur YouTube
+            </a>
+
+        </article>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>Face2Flow</h3>
+                <p>Média culturel nouvelle génération dédié aux créateurs urbains.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Navigation</h3>
+                <a href="/index.html">Accueil</a>
+                <a href="/a_propos.html">À propos</a>
+                <a href="/articles.html">Articles</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Communauté</h3>
+                <a href="/talents.html">Talents</a>
+                <a href="/collabs.html">Collaborer</a>
+                <a href="/contact.html">Contact</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Suivez-nous</h3>
+                <a href="https://www.instagram.com/face2flow/">Instagram</a>
+                <a href="https://www.tiktok.com/@face2flow">TikTok</a>
+                <a href="https://www.youtube.com/@FACE2FLOW">YouTube</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-legal">
+                <a href="/légales.html">Mentions légales</a>
+                <a href="/politique.html">Politique de confidentialité</a>
+            </div>
+            <br>
+            <div>
+                © 2026 Face2Flow. Tous droits réservés.
+            </div>
+        </div>
+        <style>
+            .footer-legal a {
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .footer-legal a:hover {
+                color: rgb(255, 200, 0);
+            }
+        </style>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
