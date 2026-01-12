@@ -447,16 +447,27 @@ p {
     }
 
     .hero-content {
-        padding: 0 20px;
+        padding:  0;
+        max-width: 100%;
+
     }
 
     .hero h1 {
-        font-size: 38px;
+        font-size: 20px;
+    }
+    .hero h1 span {
+        font-size: 16px;
+    }
+    .hero p {
+        font-size: 14px;
+        width: 280px;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: flex-start;
+        font-size: 22px;
+        font-weight: bold;
     }
 
     .footer-container {
@@ -642,6 +653,12 @@ p {
         flex-direction: column;
         align-items: center;
     }
+    .section-title2 {
+        font-size: 22px;
+    }
+    .collaborate-section{
+        padding: 100px 20px;
+    }
 }
 
 .section-title3 {
@@ -687,6 +704,90 @@ p {
     transform: scale(1.02);
     transition: transform 0.5s ease;
 }
+/* === CONTENEUR GLOBAL === */
+.teams {
+    padding: 40px 20px;
+    background-color: #121212;
+    text-align: center;
+}
+.cards-equipe2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* === CARTE === */
+.card-equipe2 {
+
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+}
+
+.card-equipe2:hover,
+.card-equipe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* === IMAGE CIRCULAIRE === */
+.card-img-equipe2 {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+.card-equipe2:hover .card-img-equipe2,
+.card-equipe:hover .card-img-equipe2 {
+    transform: scale(1.05);
+}
+
+/* === CONTENU TEXTE === */
+.card-content-equipe2 h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffd501;
+    line-height: 1.4;
+}
+
+.card-content-equipe2 span {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.btn-plus {
+    display: flex;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #ffd50143;
+    color: #111;
+    text-decoration: none;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-plus:hover {
+    background-color: #ffd501;
+    color: #000;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+    .card-img-equipe2 {
+        width: 150px;
+        height: 150px;
+    }
+}
 
 @media (max-width: 900px) {
     .container-about {
@@ -696,7 +797,11 @@ p {
     .about-text {
         width: 100%;
     }
-
+    .center-content {
+        margin-top: 0;
+    }
+    .center-content img {
+        width: 100%;
 }
 
 .teams {
@@ -705,48 +810,8 @@ p {
     text-align: center;
 }
 
-.cards-equipe {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
 
-}
 
-.card-equipe {
-    background: #1a1a1a;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-equipe:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.card-img-equipe {
-    width: 100%;
-    height: 240px;
-    border-radius: 10px 10px 0 0;
-    background-size: cover;
-    background-position: center;
-}
-
-.card-content-equipe {
-    padding: 15px;
-    text-align: center;
-}
-
-.card-content-equipe h4 {
-    margin: 10px 0 5px;
-    color: #ffd501;
-}
-
-.card-content-equipe span {
-    color: #ccc;
-    font-size: 14px;
-}
 
 /* === CONTENEUR GLOBAL === */
 .cards-equipe2 {
