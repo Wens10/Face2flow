@@ -1,0 +1,92 @@
+/* ================= ARTICLE HERO ================= */
+.article-hero {
+  height: 330px;
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.95)),
+    url("https://images.unsplash.com/photo-1515378791036-0648a3ef77b2");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+}
+
+.article-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+.article-hero h1 {
+  color: #ffc800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article-intro {
+  color: #ccc;
+  max-width: 700px;
+
+  line-height: 1.8;
+}
+
+.artist-section {
+  margin-top: 5rem;
+}
+
+.artist-header {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+}
+
+.artist-photo {
+  width: 220px;
+  height: 220px;
+  background: #111;
+  border-radius: 12px;
+}
+
+.artist-info h2 {
+  color: #ffc800;
+  font-size: 1.6rem;
+}
+
+.artist-role {
+  color: #aaa;
+  font-size: .9rem;
+  margin-bottom: .8rem;
+}
+
+.artist-desc {
+  color: #ccc;
+  line-height: 1.7;
+}
+
+.artist-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #ffc800;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.artist-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.work {
+  height: 200px;
+  background: #111;
+  border-radius: 10px;
+}
+
+.article-conclusion {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #111;
+  color: #ccc;
+}
