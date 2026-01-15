@@ -5,13 +5,19 @@
     <loc>https://face2flow.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://face2flow.vercel.app/index.html</loc>
+  </url>
+  <url>
+    <loc>https://face2flow.vercel.app/a_propos.html</loc>
+  </url>
 
   <url>
     <loc>https://face2flow.vercel.app/articles.html</loc>
   </url>
 
   <url>
-    <loc>https://face2flow.vercel.app/talents.html</loc>
+    <loc>https://face2flow.vercel.app/Talents.html</loc>
   </url>
 
   <url>
@@ -19,7 +25,7 @@
   </url>
 
   <url>
-    <loc>https://face2flow.vercel.app/contact.html</loc>
+    <loc>https://face2flow.vercel.app/Contact.html</loc>
   </url>
 
 </urlset>

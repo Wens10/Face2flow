@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  
 }
 
 .article-page {
@@ -40,10 +39,28 @@
   gap: 2rem;
 }
 
-.artist-photo {
+.artist-photo1 {
   width: 220px;
   height: 220px;
-  background: #111;
+  background: url(/photos/Emmanuel.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+.artist-photo2 {
+  width: 220px;
+  height: 220px;
+  background: url(/photos/);
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+.artist-photo3 {
+  width: 220px;
+  height: 220px;
+  background: url(/photos/);
+  background-size: cover;
+  background-position: center;
   border-radius: 12px;
 }
 
@@ -77,16 +94,87 @@
   gap: 1rem;
   margin-top: 2rem;
 }
-
-.work {
+/* Otins */
+.work1 {
   height: 200px;
   background: #111;
   border-radius: 10px;
 }
+.work2 {
+  height: 200px;
+  background: #111;
+  border-radius: 10px;
+}
+.work3 {
+  height: 200px;
+  background: #111;
+  border-radius: 10px;
+}
+/* Yanis */
+.work4 {
+  height: 200px;
+  background: #111;
+  border-radius: 10px;
+}
+.work5 {
+  height: 200px;
+  background: #111;
+  border-radius: 10px;
+}
+.work6 {
+  height: 200px;
+  background: #111;
+  border-radius: 10px;
+}
+/* Naudy */
+.work7 {
+  height: 200px;
+  background: #111;
+  border-radius: 10px;
+}
+.work8 {
+  height: 200px;
+  background: #111;
+  border-radius: 10px;
+}
+.work9 {
+  height: 200px;
+  background: #111;
+  border-radius: 10px;
+}
+
 
 .article-conclusion {
   margin-top: 5rem;
   padding-top: 2rem;
   border-top: 1px solid #111;
   color: #ccc;
+}
+@media (max-width: 900px) {
+  .article-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .artist-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .artist-photo1,
+  .artist-photo2,
+  .artist-photo3 {
+    margin: auto;
+  }
+  .article-hero {
+  height: 420px;
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.95)),
+    url("https://images.unsplash.com/photo-1515378791036-0648a3ef77b2");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 }
