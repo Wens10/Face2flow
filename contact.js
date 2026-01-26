@@ -14,38 +14,49 @@ questions.forEach(q => {
     }
   });
 });
-const form = document.getElementById("contactForm");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault(); // empêche l'envoi HTML classique
 
-  const data = {
-    name: form.name.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    subject: form.subject.value,
-    message: form.message.value
-  };
 
-  try {
-    const response = await fetch("https://formspree.io/f/xnjjakey", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
+  (function () {
+    emailjs.init("BDuPNByBtyP5dytd0"); // Remplace par ta clé
+        })();
 
-    if (!response.ok) {
-      throw new Error("Erreur Formspree");
-    }
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
 
-    alert("✅ Message envoyé avec succès !");
-    form.reset();
+  const form = this;
+  const btn = form.querySelector('button');
+  const originalBtnText = btn.textContent;
 
-  } catch (error) {
-    console.error(error);
-    alert("❌ Une erreur est survenue. Merci de réessayer.");
-  }
-});
+  // Récupération des données par l'attribut "name"
+  const params = {
+    fullname: form.querySelector('[name="name"]').value,
+  email: form.querySelector('[name="email"]').value,
+  phone: form.querySelector('[name="phone"]').value || "Non spécifié",
+  subject: form.querySelector('[name="subject"]').value,
+  message: form.querySelector('[name="message"]').value,
+  time: new Date().toLocaleString("fr-FR")
+            };
+
+  btn.disabled = true;
+  btn.textContent = "Envoi en cours...";
+
+  // 1. Envoi vers Wenceslas
+  emailjs.send("service_u13few8", "template_sa4f1sn", params)
+                .then(() => {
+                    // 2. Envoi de l'accusé au client
+                    return emailjs.send("service_u13few8", "template_ttc2fr3", params);
+                })
+                .then(() => {
+    alert("Merci ! Votre message a bien été envoyé.");
+  form.reset();
+                })
+                .catch((err) => {
+    console.error("Erreur:", err);
+  alert("Une erreur est survenue lors de l'envoi.");
+                })
+                .finally(() => {
+    btn.disabled = false;
+  btn.textContent = originalBtnText;
+                });
+        });

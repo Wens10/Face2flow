@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="collabs.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9662797327175556"
      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -155,9 +156,10 @@
 
                     <label>Email</label>
                     <input type="email" name="email" placeholder="votre@email.com" required>
-
+                    <label>Téléphone (optionnel)</label>
+                    <input type="tel" name="phone" placeholder="+33 6 12 34 56 78">
                     <label>Type de collaboration</label>
-                    <select name="type" required>
+                    <select name="subject" required>
                         <option value="">Sélectionnez une option</option>
                         <option>Proposer un article</option>
                         <option>Être interviewé</option>
@@ -169,7 +171,7 @@
                     <input type="text" name="speciality" placeholder="Ex: Graffiti, Musique, Design..." required>
 
                     <label>Décrivez votre projet</label>
-                    <textarea name="project" placeholder="Parlez-nous de votre projet..." required></textarea>
+                    <textarea name="message" placeholder="Parlez-nous de votre projet..." required></textarea>
 
                     <label>Portfolio / Liens (optionnel)</label>
                     <input type="url" name="portfolio" placeholder="https://...">

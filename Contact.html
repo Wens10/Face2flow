@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9662797327175556"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
 </head>
 
 <body>
@@ -171,25 +175,26 @@
 
                     <label>Sujet *</label>
                     <select name="subject" required>
-                        <option value="">Sélectionnez un sujet</option>
-                        <option>Proposition d’article</option>
-                        <option>Collaboration</option>
-                        <option>Presse</option>
-                        <option>Autre</option>
+                        <option value="" disabled selected>Sélectionnez un sujet</option>
+                        <option value="Proposition d’article">Proposition d’article</option>
+                        <option value="Collaboration">Collaboration</option>
+                        <option value="Presse">Presse</option>
+                        <option value="Autre">Autre</option>
                     </select>
 
                     <label>Message *</label>
                     <textarea name="message" placeholder="Votre message..." required></textarea>
 
                     <div class="checkbox">
-                        <input type="checkbox" required>
-                        <span>J'accepte que mes données soient utilisées pour me recontacter.</span>
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent" style="display: inline; font-size: 14px; color: #ccc; margin-left: 5px;">
+                            J'accepte que mes données soient utilisées pour me recontacter.
+                        </label>
                     </div>
 
                     <button type="submit">Envoyer le message</button>
 
                 </form>
-
             </div>
 
         </section>
