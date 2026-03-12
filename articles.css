@@ -165,6 +165,12 @@
               background-position: center;
               border-radius: 5px;
           }
+          .thumb.photo {
+              background-image: url(/photos/innov\ photo.png);
+              background-size: cover;
+              background-position: center;
+              border-radius: 5px;
+          }
 
           /* TEXT */
           .card time {
