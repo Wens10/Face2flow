@@ -39,14 +39,7 @@
   gap: 2rem;
 }
 
-.artist-photo1 {
-  width: 220px;
-  height: 220px;
-  background: url(/photos/Image\ \(12\).jpg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-}
+
 .artist-photo2 {
   width: 220px;
   height: 220px;
@@ -55,14 +48,7 @@
   background-position: center;
   border-radius: 12px;
 }
-.artist-photo3 {
-  width: 220px;
-  height: 220px;
-  background: url(/photos/naudy.jpg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-}
+
 
 .artist-info h2 {
   color: #ffc800;
@@ -94,28 +80,7 @@
   gap: 1rem;
   margin-top: 2rem;
 }
-/* Otins */
-.work1 {
-  height: 200px;
-  background-image: url(/photos/tafffff.jpg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-.work2 {
-  height: 200px;
-  background-image: url(/photos/taffotins2.jpg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-.work3 {
-  height: 200px;
-   background-image: url(/photos/taffotins2.png);
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
+
 /* Yanis */
 .work4 {
   height: 200px;
@@ -134,28 +99,6 @@
 .work6 {
   height: 200px;
    background-image: url(/photos/yanistaff3.jpg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-/* Naudy */
-.work7 {
-  height: 200px;
-   background-image: url(/photos/imgPAUL.jpg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-.work8 {
-  height: 200px;
-   background-image: url(/photos/imgPAUL2.jpg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-.work9 {
-  height: 200px;
-   background-image: url(/photos/imgPAUL3.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 10px;
