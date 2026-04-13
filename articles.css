@@ -171,6 +171,12 @@
               background-position: center;
               border-radius: 5px;
           }
+          .thumb.mode {
+              background-image: url(/photos/miss_groupe.jpeg);
+              background-size: cover;
+              background-position: center;
+              border-radius: 5px;
+          }
 
           /* TEXT */
           .card time {
