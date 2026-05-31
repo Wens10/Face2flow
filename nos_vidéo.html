@@ -6,6 +6,7 @@
     <title>Face2Flow – Média culturel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Face2Flow – Média culturel nouvelle génération.">
+    <meta name="msvalidate.01" content="648C6364995F9FEEAAA4883859726606" />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -13,10 +14,106 @@
     <meta name="apple-mobile-web-app-title" content="F2F" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="talents.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9662797327175556"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 </head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Face2Flow",
+  "url": "https://face2flow.vercel.app",
+  "sameAs": [
+    "https://www.instagram.com/face2flow/",
+    "https://www.tiktok.com/@face2flow",
+    "https://www.youtube.com/@FACE2FLOW"
+  ]
+}
+</script>
+<script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+    /* ==========================
+   SECTION VIDÉOS
+========================== */
+
+    .portfolio-section {
+        margin-top: 60px;
+        padding: 80px 30px;
+    }
+
+    .videos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    .video-card {
+        display: flex;
+        flex-direction: column;
+        background: #111;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+        transition: transform .3s ease;
+    }
+
+    .video-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+
+
+    /* ==========================
+   TABLETTE
+========================== */
+
+    @media (max-width: 992px) {
+
+        .videos-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+    }
+
+    /* ==========================
+   MOBILE
+========================== */
+
+    @media (max-width: 768px) {
+
+        .portfolio-section {
+            padding: 60px 0;
+        }
+
+        .videos-grid {
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+
+
+    }
+</style>
 
 <body>
 
@@ -30,13 +127,12 @@
             <nav class="nav-desktop">
                 <a href="/index.html">Accueil</a>
                 <a href="/a_propos.html">À propos</a>
-                <a href="/nos_vidéo.html">Nos vidéos</a>
+                <a href="/nos_vidéo.html" class="active">Nos vidéos</a>
                 <a href="/articles.html">Articles</a>
-                <a href="#" class="active">Talents</a>
+                <a href="/Talents.html">Talents</a>
                 <a href="/collabs.html">Collaborer</a>
                 <a href="/Contact.html">Contact</a>
             </nav>
-
         </div>
         <nav role="navigation">
             <div id="menuToggle">
@@ -66,12 +162,11 @@
       does require a slight bit of JS.
       -->
                     <li>
-                        <a href="/index.html" class="active">Accueil</a>
+                        <a href="#" class="active">Accueil</a>
                     </li>
                     <li>
                         <a href="/a_propos.html">À propos</a>
                     </li>
-                    <li><a href="/nos_vidéo.html">Nos vidéos</a></li>
                     <li><a href="/articles.html">Articles</a></li>
                     <li><a href="/Talents.html">Talents</a></li>
                     <li><a href="/collabs.html">Collaborer</a></li>
@@ -83,60 +178,52 @@
 
     <!-- ================= HERO ================= -->
     <main class="main-content">
-        <section class="talents-hero">
-            <div class="hero-content">
-                <h1>Talents</h1>
-                <p>Rencontrez les créateurs qui façonnent la culture urbaine de demain.</p>
+
+
+        <section class="portfolio-section container">
+            <h2 class="section-title">Nos vidéos</h2>
+
+            <div class="videos-grid">
+
+                <article class="video-card">
+                    <div class="video-wrapper">
+                        <iframe width="1430" height="804" src="https://www.youtube.com/embed/dB4YB4Zp4WI"
+                            title="Miss RDC Diaspora France 2026 : L’interview exclusive de sa Présidente | F2F Le Doc"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-wrapper">
+                        <iframe width="1430" height="804" src="https://www.youtube.com/embed/26DaieURP9k"
+                            title="PAULINE MONKA BILÉ / PRÉMIERE INTERVIEW APRÉS SON SACRE MISS RDC DIASPORA FRANCE 2026"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-wrapper">
+                        <iframe width="1430" height="804" src="https://www.youtube.com/embed/5XeCQMGvFJA"
+                            title="Vidéo Face2Flow" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </article>
+
             </div>
         </section>
-        <section class="talents-intro">
-            <h2>Notre communauté de créateurs</h2>
-            <p>
-                Face2Flow met en lumière les artistes, musiciens, designers et innovateurs
-                qui redéfinissent les codes de la création urbaine.
+        <section class="collaborate-section container">
+            <h3 class="section-title2">Vous êtes un talent créatif ?</h3>
+            <p class="center-text">
+                Rejoignez notre communauté de créateurs urbains et faites découvrir votre art au monde entier.
             </p>
-        </section>
-
-
-        <section class="talents-search">
-            <input type="search" id="talentSearch" placeholder="Rechercher un talent">
-            <p class="count"><span id="talentCount">0</span> talents</p>
-        </section>
-
-        <section class="talents-grid">
-
-            <!-- TALENT -->
-            <article class="talent-card" data-name="alison b">
-                <div class="img-wrapper">
-                    <img src="/photos/alison.jpg">
-                    <a href="https://www.instagram.com/b_y_alis/" target="_blank" class="overlay">
-                        Voir le profil
-                    </a>
-                </div>
-                <h3>Alison B</h3>
-                <span>Personnalité publique</span>
-                <p>Influenceuse franco-congolaise.</p>
-            </article>
-
-            <article class="talent-card" data-name="yooma">
-                <div class="img-wrapper">
-                    <img src="/photos/Yooma.jpg">
-                    <a href="https://www.instagram.com/yooma_officiel" target="_blank" class="overlay">
-                        Voir le profil
-                    </a>
-                </div>
-                <h3>Yooma</h3>
-                <span>Artiste chanteur</span>
-                <p>Artiste chanteur d'origine congolaise évoluant en France.</p>
-            </article>
-
-
-
-        </section>
-
-        <section class="talents-cta">
-            <h2>Vous souhaitez rejoindre notre communauté ?</h2>
-            <a href="/collabs.html" class="cta-btn">Proposer votre profil</a>
+            <div class="center-content">
+                <a href="/collabs.html" class="btn btn-yellow">Collaborer</a>
+            </div>
         </section>
     </main>
 
@@ -154,7 +241,6 @@
                 <h3>Navigation</h3>
                 <a href="/index.html">Accueil</a>
                 <a href="/a_propos.html">À propos</a>
-                <a href="/nos_vidéo.html">Nos vidéos</a>
                 <a href="/articles.html">Articles</a>
             </div>
 
@@ -199,9 +285,9 @@
         </style>
     </footer>
 
-    <script src="script2.js"></script>
 
 
+    <script src="script.js"></script>
 </body>
 
 </html>
